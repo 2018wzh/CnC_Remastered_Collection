@@ -1,0 +1,515 @@
+set(PROJECT_NAME TiberianDawn)
+
+################################################################################
+# Source groups
+################################################################################
+set(Source_Files
+    "AADATA.CPP"
+    "ABSTRACT.CPP"
+    "ABSTRACT.H"
+    "ADATA.CPP"
+    "AIRCRAFT.CPP"
+    "AIRCRAFT.H"
+    "ALLOC.CPP"
+    "ANIM.CPP"
+    "ANIM.H"
+    "AUDIO.CPP"
+    "AUDIO.H"
+    "BASE.CPP"
+    "BASE.H"
+    "BBDATA.CPP"
+    "BDATA.CPP"
+    "BUILDING.CPP"
+    "BUILDING.H"
+    "BULLET.CPP"
+    "BULLET.H"
+    "CARGO.CPP"
+    "CARGO.H"
+    "CCDDE.CPP"
+    "CCDDE.H"
+    "CCFILE.CPP"
+    "CCFILE.H"
+    "CDATA.CPP"
+    "CDFILE.CPP"
+    "CDFILE.H"
+    "CELL.CPP"
+    "CELL.H"
+    "CHECKBOX.CPP"
+    "CHECKBOX.H"
+    "CHEKLIST.CPP"
+    "CHEKLIST.H"
+    "COLRLIST.CPP"
+    "COLRLIST.H"
+    "COMBAT.CPP"
+    "COMBUF.CPP"
+    "COMBUF.H"
+    "COMPAT.H"
+    "COMQUEUE.CPP"
+    "COMQUEUE.H"
+    "CONFDLG.CPP"
+    "CONFDLG.H"
+    "CONNECT.CPP"
+    "CONNECT.H"
+    "CONNMGR.H"
+    "CONQUER.CPP"
+    "CONQUER.H"
+    "CONST.CPP"
+    "CONTROL.CPP"
+    "CONTROL.H"
+    "COORD.CPP"
+    "COORDA.ASM"
+    "COORDA.h"
+    "CREDITS.CPP"
+    "CREDITS.H"
+    "CREW.CPP"
+    "CREW.H"
+    "DDE.CPP"
+    "DDE.H"
+    "DEBUG.CPP"
+    "DEBUG.H"
+    "DEFINES.H"
+    "DESCDLG.CPP"
+    "DESCDLG.H"
+    "DIAL8.CPP"
+    "DIAL8.H"
+    "DIALOG.CPP"
+    "DISPLAY.CPP"
+    "DISPLAY.H"
+    "DLLInterface.cpp"
+    "DLLInterface.h"
+    "DLLInterfaceEditor.cpp"
+    "DLLInterfaceVersion.h"
+    "DOOR.CPP"
+    "DOOR.H"
+    "DPMI.CPP"
+    "DPMI.H"
+    "DRIVE.CPP"
+    "DRIVE.H"
+    "EDIT.CPP"
+    "EDIT.H"
+    "ENDING.CPP"
+    "ENDING.H"
+    "EVENT.CPP"
+    "EVENT.H"
+    "EXPAND.CPP"
+    "EXTERNS.H"
+    "FACING.CPP"
+    "FACING.H"
+    "FACTORY.CPP"
+    "FACTORY.H"
+    "FIELD.CPP"
+    "FIELD.H"
+    "FINDPATH.CPP"
+    "FLASHER.CPP"
+    "FLASHER.H"
+    "FLY.CPP"
+    "FLY.H"
+    "FOOT.CPP"
+    "FOOT.H"
+    "FTIMER.H"
+    "FUNCTION.H"
+    "FUSE.CPP"
+    "FUSE.H"
+    "GADGET.CPP"
+    "GADGET.H"
+    "GAMEDLG.CPP"
+    "GAMEDLG.H"
+    "GAUGE.CPP"
+    "GAUGE.H"
+    "GLOBALS.CPP"
+    "GOPTIONS.CPP"
+    "GOPTIONS.H"
+    "GSCREEN.CPP"
+    "GSCREEN.H"
+    "HDATA.CPP"
+    "HEAP.CPP"
+    "HEAP.H"
+    "HELP.CPP"
+    "HELP.H"
+    "HOUSE.CPP"
+    "HOUSE.H"
+    "IDATA.CPP"
+    "INFANTRY.CPP"
+    "INFANTRY.H"
+    "INI.CPP"
+    "INIT.CPP"
+    "INTERNET.CPP"
+    "INTERPAL.CPP"
+    "INTRO.CPP"
+    "INTRO.H"
+    "IOMAP.CPP"
+    "IOOBJ.CPP"
+    "IPX.CPP"
+    "IPX.H"
+    "IPX95.CPP"
+    "IPX95.H"
+    "IPXADDR.CPP"
+    "IPXADDR.H"
+    "IPXCONN.CPP"
+    "IPXCONN.H"
+    "IPXGCONN.CPP"
+    "IPXGCONN.H"
+    "IPXMGR.CPP"
+    "IPXMGR.H"
+    "JSHELL.CPP"
+    "JSHELL.H"
+    "KEYFBUFF.INC"
+    "KEYFRAME.CPP"
+    "LAYER.CPP"
+    "LAYER.H"
+    "LED.H"
+    "LINK.CPP"
+    "LINK.H"
+    "LIST.CPP"
+    "LIST.H"
+    "LOADDLG.CPP"
+    "LOADDLG.H"
+    "LOGIC.CPP"
+    "LOGIC.H"
+    "MAP.CPP"
+    "MAP.H"
+    "MAPEDDLG.CPP"
+    "MAPEDIT.CPP"
+    "MAPEDIT.H"
+    "MAPEDPLC.CPP"
+    "MAPEDSEL.CPP"
+    "MAPEDTM.CPP"
+    "MAPSEL.CPP"
+    "MEMCHECK.H"
+    "MENUS.CPP"
+    "MESSAGE.H"
+    "MiscAsm.cpp"
+    "MISSION.CPP"
+    "MISSION.H"
+    "MIXFILE.CPP"
+    "MIXFILE.H"
+    "MONOC.CPP"
+    "MONOC.H"
+    "MOUSE.CPP"
+    "MOUSE.H"
+    "MPLAYER.CPP"
+    "MSGBOX.CPP"
+    "MSGBOX.H"
+    "MSGLIST.CPP"
+    "MSGLIST.H"
+    "NETDLG.CPP"
+    "NOSEQCON.CPP"
+    "NOSEQCON.H"
+    "NULLCONN.CPP"
+    "NULLCONN.H"
+    "NULLDLG.CPP"
+    "NULLMGR.CPP"
+    "NULLMGR.H"
+    "OBJECT.CPP"
+    "OBJECT.H"
+    "ODATA.CPP"
+    "OPTIONS.CPP"
+    "OPTIONS.H"
+    "OVERLAY.CPP"
+    "OVERLAY.H"
+    "PACKET.CPP"
+    "PACKET.H"
+    "PAGFAULT.ASM"
+    "PHONE.H"
+    "POWER.CPP"
+    "POWER.H"
+    "PROFILE.CPP"
+    "QUEUE.CPP"
+    "QUEUE.H"
+    "RADAR.CPP"
+    "RADAR.H"
+    "RADIO.CPP"
+    "RADIO.H"
+    "RAND.CPP"
+    "RAWFILE.CPP"
+    "RAWFILE.H"
+    "REAL.H"
+    "REGION.H"
+    "REINF.CPP"
+    "RULES.CPP"
+    "RULES.H"
+    "SAVEDLG.H"
+    "SAVELOAD.CPP"
+    "SCENARIO.CPP"
+    "SCORE.CPP"
+    "SCORE.H"
+    "SCREEN.H"
+    "SCROLL.CPP"
+    "SCROLL.H"
+    "SDATA.CPP"
+    "SEQCONN.CPP"
+    "SEQCONN.H"
+    "SESSION.H"
+    "SHAPEBTN.CPP"
+    "SHAPEBTN.H"
+    "SIDEBAR.CPP"
+    "SIDEBAR.H"
+    "SIDEBARGlyphx.CPP"
+    "SIDEBARGlyphx.H"
+    "SLIDER.CPP"
+    "SLIDER.H"
+    "SMUDGE.CPP"
+    "SMUDGE.H"
+    "SOUNDDLG.CPP"
+    "SOUNDDLG.H"
+    "SPECIAL.CPP"
+    "SPECIAL.H"
+    "STAGE.H"
+    "STARTUP.CPP"
+    "STATS.CPP"
+    "SUPER.CPP"
+    "SUPER.H"
+    "SUPPORT.ASM"
+    "TAB.CPP"
+    "TAB.H"
+    "TARCOM.CPP"
+    "TARCOM.H"
+    "TARGET.CPP"
+    "TARGET.H"
+    "TCPIP.CPP"
+    "TCPIP.H"
+    "TDATA.CPP"
+    "TEAM.CPP"
+    "TEAM.H"
+    "TEAMTYPE.CPP"
+    "TEAMTYPE.H"
+    "TECHNO.CPP"
+    "TECHNO.H"
+    "TEMPLATE.CPP"
+    "TEMPLATE.H"
+    "TERRAIN.CPP"
+    "TERRAIN.H"
+    "TEXTBLIT.H"
+    "TEXTBTN.CPP"
+    "TEXTBTN.H"
+    "THEME.CPP"
+    "THEME.H"
+    "TOGGLE.CPP"
+    "TOGGLE.H"
+    "TRIGGER.CPP"
+    "TRIGGER.H"
+    "TURRET.CPP"
+    "TURRET.H"
+    "TXTLABEL.CPP"
+    "TXTLABEL.H"
+    "TYPE.H"
+    "UDATA.CPP"
+    "UNIT.CPP"
+    "UNIT.H"
+    "UTRACKER.CPP"
+    "UTRACKER.H"
+    "VECTOR.CPP"
+    "VECTOR.H"
+    "VISUDLG.CPP"
+    "VISUDLG.H"
+    "WATCOM.H"
+    "WINASM.ASM"
+    "WINSTUB.CPP"
+    "WWALLOC.H"
+    "WWFILE.H"
+)
+source_group("Source Files" FILES ${Source_Files})
+
+set(Source_Files__Resources
+    "RESOURCE/resource.h"
+)
+source_group("Source Files\\Resources" FILES ${Source_Files__Resources})
+
+set(Source_Files__Win32Lib
+    "Shape.cpp"
+    "WIN32LIB/_DIPTABL.CPP"
+    "WIN32LIB/_FILE.H"
+    "WIN32LIB/ALLOC.CPP"
+    "WIN32LIB/AUDIO.H"
+    "WIN32LIB/BUFFER.CPP"
+    "WIN32LIB/BUFFER.H"
+    "WIN32LIB/BUFFGLBL.CPP"
+    "WIN32LIB/DDRAW.CPP"
+    "WIN32LIB/DDRAW.H"
+    "WIN32LIB/DEFINES.H"
+    "WIN32LIB/DESCMGMT.H"
+    "WIN32LIB/DIFFTB.INC"
+    "WIN32LIB/DIPTHONG.CPP"
+    "WIN32LIB/DIPTHONG.H"
+    "WIN32LIB/DPLAY.H"
+    "WIN32LIB/DRAWBUFF.H"
+    "WIN32LIB/DRAWBUFF.INC"
+    "WIN32LIB/DrawMisc.cpp"
+    "WIN32LIB/DRAWRECT.CPP"
+    "WIN32LIB/DSETUP.H"
+    "WIN32LIB/DSOUND.H"
+    "WIN32LIB/EXTERNS.H"
+    "WIN32LIB/FACINGFF.h"
+    "WIN32LIB/FASTFILE.H"
+    "WIN32LIB/FILE.H"
+    "WIN32LIB/FILEPCX.H"
+    "WIN32LIB/FILETEMP.H"
+    "WIN32LIB/FONT.CPP"
+    "WIN32LIB/FONT.H"
+    "WIN32LIB/FUNCTION.H"
+    "WIN32LIB/GBUFFER.CPP"
+    "WIN32LIB/GBUFFER.H"
+    "WIN32LIB/GBUFFER.INC"
+    "WIN32LIB/GETSHAPE.CPP"
+    "WIN32LIB/HOLD.TXT"
+    "WIN32LIB/ICONCACH.H"
+    "WIN32LIB/ICONSET.CPP"
+    "WIN32LIB/IFF.CPP"
+    "WIN32LIB/IFF.H"
+    "WIN32LIB/INDEXTB.INC"
+    "WIN32LIB/IRANDOM.CPP"
+    "WIN32LIB/KEYBOARD.CPP"
+    "WIN32LIB/KEYBOARD.H"
+    "WIN32LIB/KEYBOARD.INC"
+    "WIN32LIB/KEYSTRUC.INC"
+    "WIN32LIB/LOAD.CPP"
+    "WIN32LIB/LOADFONT.CPP"
+    "WIN32LIB/LOADPAL.CPP"
+    "WIN32LIB/MCGAPRIM.INC"
+    "WIN32LIB/MEM.CPP"
+    "WIN32LIB/MEMFLAG.H"
+    "WIN32LIB/MISC.H"
+    "WIN32LIB/MODEMREG.H"
+    "WIN32LIB/MONO.H"
+    "WIN32LIB/MORPHPAL.CPP"
+    "WIN32LIB/MOUSE.H"
+    "WIN32LIB/MOUSE.INC"
+    "WIN32LIB/MOUSEWW.CPP"
+    "WIN32LIB/NEWDEL.CPP"
+    "WIN32LIB/NYBBTB.INC"
+    "WIN32LIB/PALETTE.CPP"
+    "WIN32LIB/PALETTE.H"
+    "WIN32LIB/PLAYCD.H"
+    "WIN32LIB/PROFILE.H"
+    "WIN32LIB/PROFILE.INC"
+    "WIN32LIB/RAWFILE.H"
+    "WIN32LIB/REGIONSZ.CPP"
+    "WIN32LIB/REMAP.ASM"
+    "WIN32LIB/SET_FONT.CPP"
+    "WIN32LIB/SHAPE.H"
+    "WIN32LIB/SHAPE.INC"
+    "WIN32LIB/SOUND.H"
+    "WIN32LIB/SOUNDINT.H"
+    "WIN32LIB/STAMP.INC"
+    "WIN32LIB/STRUCTS.H"
+    "WIN32LIB/SVGAPRIM.INC"
+    "WIN32LIB/TILE.H"
+    "WIN32LIB/TIMER.CPP"
+    "WIN32LIB/TIMER.H"
+    "WIN32LIB/TIMERDWN.CPP"
+    "WIN32LIB/TIMERINI.CPP"
+    "WIN32LIB/VIDEO.H"
+    "WIN32LIB/WINCOMM.H"
+    "WIN32LIB/WINDOWS.CPP"
+    "WIN32LIB/WINHIDE.CPP"
+    "WIN32LIB/WRITEPCX.CPP"
+    "WIN32LIB/WSA.CPP"
+    "WIN32LIB/WSA.H"
+    "WIN32LIB/WW_WIN.H"
+    "WIN32LIB/WWFILE.H"
+    "WIN32LIB/WWLIB32.H"
+    "WIN32LIB/WWMEM.H"
+    "WIN32LIB/WWMEM.INC"
+    "WIN32LIB/WWSTD.H"
+)
+source_group("Source Files\\Win32Lib" FILES ${Source_Files__Win32Lib})
+
+set(ALL_FILES
+    ${Source_Files}
+    ${Source_Files__Resources}
+    ${Source_Files__Win32Lib}
+)
+
+################################################################################
+# Target
+################################################################################
+add_library(${PROJECT_NAME} SHARED ${ALL_FILES})
+
+use_props(${PROJECT_NAME} "${CMAKE_CONFIGURATION_TYPES}" "${DEFAULT_CXX_PROPS}")
+################################################################################
+# Includes for CMake from *.props
+################################################################################
+use_props(${PROJECT_NAME} "${CMAKE_CONFIGURATION_TYPES}" "$ENV{VCTargetsPath}/BuildCustomizations/masm.cmake")
+
+set(ROOT_NAMESPACE TiberianDawn)
+
+set_target_properties(${PROJECT_NAME} PROPERTIES
+    VS_GLOBAL_KEYWORD "Win32Proj"
+)
+################################################################################
+# Output directory
+################################################################################
+set_target_properties(${PROJECT_NAME} PROPERTIES
+    OUTPUT_DIRECTORY_RELEASE "${CMAKE_CURRENT_SOURCE_DIR}/../bin/${CMAKE_VS_PLATFORM_NAME}/"
+)
+set_target_properties(${PROJECT_NAME} PROPERTIES
+    INTERPROCEDURAL_OPTIMIZATION         "FALSE"
+)
+################################################################################
+# MSVC runtime library
+################################################################################
+get_property(MSVC_RUNTIME_LIBRARY_DEFAULT TARGET ${PROJECT_NAME} PROPERTY MSVC_RUNTIME_LIBRARY)
+string(CONCAT "MSVC_RUNTIME_LIBRARY_STR"
+    MultiThreaded
+)
+set_target_properties(${PROJECT_NAME} PROPERTIES MSVC_RUNTIME_LIBRARY ${MSVC_RUNTIME_LIBRARY_STR})
+
+################################################################################
+# Include directories
+################################################################################
+target_include_directories(${PROJECT_NAME} PUBLIC
+    "${CMAKE_CURRENT_SOURCE_DIR}/WIN32LIB"
+)
+
+################################################################################
+# Compile definitions
+################################################################################
+target_compile_definitions(${PROJECT_NAME} PRIVATE
+    "TRUE_FALSE_DEFINED;"
+    "WIN32;"
+    "NDEBUG;"
+    "_WINDOWS;"
+    "_USRDLL;"
+    "TIBERIANDAWN_EXPORTS;"
+    "_MBCS"
+)
+
+################################################################################
+# Compile and link options
+################################################################################
+if(MSVC)
+    target_compile_options(${PROJECT_NAME} PRIVATE
+        /MP;
+        /GL-;
+        /O2;
+        /Oi;
+        /Gy;
+        /W3;
+        /WX;
+        ${DEFAULT_CXX_DEBUG_INFORMATION_FORMAT};
+        /Zp1;
+        /wd4800;
+        /wd4244;
+        /wd4996;
+        /Y-
+    )
+    target_link_options(${PROJECT_NAME} PRIVATE
+        /DEBUG:FULL;
+        /SUBSYSTEM:WINDOWS;
+        /OPT:REF;
+        /OPT:ICF;
+        /NXCOMPAT:NO;
+        /DYNAMICBASE:NO;
+        /INCREMENTAL:NO
+    )
+endif()
+
+################################################################################
+# Dependencies
+################################################################################
+set(ADDITIONAL_LIBRARY_DEPENDENCIES
+    "winmm;"
+    "Ws2_32"
+)
+target_link_libraries(${PROJECT_NAME} PUBLIC "${ADDITIONAL_LIBRARY_DEPENDENCIES}")
+
