@@ -1,21 +1,21 @@
-* The Progess
+# The Progess
 
-** [2025/03/09] First attempt to port to CMake
+## [2025/03/09] First attempt to port to CMake
 
 Using `cmake-converter` to generate the CMakeLists.txt
 
-*** Usage
+### Usage
 
 ```
-cmake -S "/home/mitchell/Documents/projects/CnC_Remastered_Collection_Linux-test" -B "path/to/proj/build" -G "Visual Studio 15 2017 Win64"
+cmake -S "path/to/proj" -B "path/to/proj/build" -G "Visual Studio 15 2017 Win64"
 
 cmake --build "path/to/proj/build"
 ```
 
-*** TESTING
+### TESTING
 - [ ] Verify the build system works
 
-**** Possible Problems
+#### Possible Problems
 
 - In `TiberianDawn.vcxproj` and `RedAlert.vcxproj` (Both line 39)
 
