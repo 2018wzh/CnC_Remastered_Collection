@@ -7,3 +7,6 @@
 [Dd]ebug/
 [Rr]elease/
 [Bb]in/
+
+# Files that are automatically generated
+CMake/
