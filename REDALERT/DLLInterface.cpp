@@ -38,6 +38,7 @@
 #include "Gadget.h"
 #include "defines.h" // VOC_COUNT, VOX_COUNT
 #include "SidebarGlyphx.h"
+#include "PATCH.h"
 
 #include <chrono>
 
