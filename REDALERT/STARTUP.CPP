@@ -38,6 +38,10 @@
 #include	<conio.h>
 #include	<io.h>
 
+ //#ifndef WIN32
+ //#define WIN32 0
+ //#endif	//WIN32
+
 #ifdef WIN32
 #include  "ccdde.h"
 #include	"ipx95.h"
@@ -96,7 +100,7 @@ extern "C"{
 
 extern void Free_Heaps(void);
 extern void DLL_Shutdown(void);
-
+/*
 BOOL WINAPI DllMain(HINSTANCE instance, unsigned int fdwReason, void *lpvReserved)
 {
 	lpvReserved;
@@ -113,9 +117,9 @@ BOOL WINAPI DllMain(HINSTANCE instance, unsigned int fdwReason, void *lpvReserve
 			WindowsTimer = NULL;
 		}
 		
-		/*
+		
 		** Red Alert doesn't clean up memory. Do some of that here.
-		*/
+		
 		MFCD::Free_All();
 
 		if (BigShapeBufferStart) {
@@ -145,6 +149,12 @@ BOOL WINAPI DllMain(HINSTANCE instance, unsigned int fdwReason, void *lpvReserve
 	return true;
 }
 
+*/
+
+#ifndef WIN32
+#define WIN32 0
+#endif _WIN32 // Denzil 6/2/98 Watcom 11.0 complains without this check
+
 
 
 /***********************************************************************************************
@@ -164,23 +174,36 @@ BOOL WINAPI DllMain(HINSTANCE instance, unsigned int fdwReason, void *lpvReserve
  * HISTORY:                                                                                    *
  *   03/20/1995 JLB : Created.                                                                 *
  *=============================================================================================*/
-#ifdef WIN32
+//#ifdef WIN32
 //int PASCAL WinMain(HINSTANCE, HINSTANCE, char *, int )
 //PG int PASCAL WinMain ( HINSTANCE instance , HINSTANCE , char * command_line , int command_show )
-int DLL_Startup(const char * command_line_in)
-
-#else	//WIN32
-int main(int argc, char * argv[])
-#endif	//WIN32
-
+int DLL_Startup(const char* command_line_in)
 {
-#ifdef WIN32
+	return 0;
+}
 
+//#else	//WIN32
+//auto __stdcall WinMain(int argc1, char * argv1[])
+//#endif	//WIN32
+//auto __stdcall WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
+//auto WinMain(HINSTANCE, HINSTANCE, LPSTR, int)°±: ÷ÿ‘ÿ∫Ø ˝”Î°∞
+ //int WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
+int WINAPI WinMain(
+	 HINSTANCE hInstance,
+	 HINSTANCE hPrevInstance,
+	 LPSTR lpCmdLine,
+	 int nShowCmd
+ )
+{
+//#ifdef WIN32
+		char* argv1[] = { "-X M"};
+	printf("111");
+	//return(EXIT_SUCCESS);
 	RunningAsDLL = true;
 	int command_show = SW_HIDE;
 	HINSTANCE instance = ProgramInstance;
 	char command_line[1024];
-	strcpy(command_line, command_line_in);
+	strcpy(command_line, *argv1);
 
 
 
@@ -208,7 +231,7 @@ int main(int argc, char * argv[])
 	}
 #endif
 
-#endif
+//#endif
 //printf("in program.\n");getch();
 //printf("ram free = %ld\n",Ram_Free(MEM_NORMAL));getch();
 #ifdef WIN32
@@ -270,7 +293,7 @@ int main(int argc, char * argv[])
 	** Get the full path to the .EXE
 	*/
 	GetModuleFileName (instance, &path_to_exe[0], 132);
-
+	MessageBox(0, path_to_exe, "File path: *.exe", MB_OK);
 	/*
 	** First argument is supposed to be a pointer to the .EXE that is running
 	**
@@ -278,6 +301,7 @@ int main(int argc, char * argv[])
 	argc=1;							//Set argument count to 1
 	argv[0]=&path_to_exe[0];	//Set 1st command line argument to point to full path
 
+	//Main_Game(argc, argv);
 	/*
 	** Get pointers to command line arguments just like if we were in DOS
 	**

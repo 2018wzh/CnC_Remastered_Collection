@@ -24,7 +24,7 @@
 #define TXT_ENEMY                	8  	// Ennemi :
 #define TXT_BUILD_DEST           	9  	// Bƒtiments d‚truits par
 #define TXT_UNIT_DEST            	10 	// Unit‚s d‚truites par
-#define TXT_TIB_HARV             	11 	// Minerai r‚colt‚ par
+#define TXT_TIB_HARV             	11 	// Minerai r‚colt?par
 #define TXT_SCORE_1              	12 	// Score: %d
 #define TXT_YES                  	13 	// Oui
 #define TXT_NO                   	14 	// Non
@@ -64,7 +64,7 @@
 #define TXT_SQUISH               	48 	// D‚bris humains
 #define TXT_CRATER               	49 	// CratŠre
 #define TXT_SCORCH               	50 	// Marque de br–lure
-#define TXT_BRIGHTNESS           	51 	// Luminosit‚ :
+#define TXT_BRIGHTNESS           	51 	// Luminosit?:
 #define TXT_MUSIC                	52 	// Musique
 #define TXT_VOLUME               	53 	// Effets sonores
 #define TXT_TINT                 	54 	// Teintes :
@@ -112,7 +112,7 @@
 #define TXT_CIV11                	96 	// Maison de Ludwig
 #define TXT_CIV12                	97 	// Meules de foin
 #define TXT_CIV13                	98 	// Meule de foin
-#define TXT_CIV14                	99 	// Champ de bl‚
+#define TXT_CIV14                	99 	// Champ de bl?
 #define TXT_CIV15                	100	// Champ en friche
 #define TXT_CIV16                	101	// Champ de ma‹s
 #define TXT_CIV17                	102	// Champ de c‚leri
@@ -243,8 +243,8 @@
 #define TXT_TO_ALL               	227	// Pour tous
 #define TXT_MESSAGE              	228	// Message :
 #define TXT_CONNECTION_LOST      	229	// Perte de connexion avec %s
-#define TXT_LEFT_GAME            	230	// %s a quitt‚ le jeu.
-#define TXT_PLAYER_DEFEATED      	231	// %s a ‚t‚ vaincu !
+#define TXT_LEFT_GAME            	230	// %s a quitt?le jeu.
+#define TXT_PLAYER_DEFEATED      	231	// %s a ‚t?vaincu !
 #define TXT_WAITING_CONNECT      	232	// Attente de connexion...
 #define TXT_NULL_CONNERR_CHECK_CABLES	233	// Erreur de connexion !
 #define TXT_MODEM_CONNERR_REDIALING	234	// Erreur de connexion !
@@ -259,7 +259,7 @@
 #define TXT_BAUD_COLON           	243	// Bauds :
 #define TXT_INIT_STRING          	244	// ChaŒne d'initialisation
 #define TXT_CWAIT_STRING         	245	// ChaŒne d'attente d'appel
-#define TXT_TONE_BUTTON          	246	// Tonalit‚
+#define TXT_TONE_BUTTON          	246	// Tonalit?
 #define TXT_PULSE_BUTTON         	247	// Impulsions
 #define TXT_HOST_SERIAL_GAME     	248	// H“te du jeu en s‚rie
 #define TXT_OPPONENT_COLON       	249	// Adversaire :
@@ -275,14 +275,14 @@
 #define TXT_PHONE_LISTING        	259	// R‚pertoire
 #define TXT_NAME_COLON           	260	// Nom :
 #define TXT_NUMBER_COLON         	261	// Num‚ro :
-#define TXT_UNABLE_FIND_MODEM    	262	// Modem non d‚tect‚. V‚rifiez
+#define TXT_UNABLE_FIND_MODEM    	262	// Modem non d‚tect? V‚rifiez
 #define TXT_NO_CARRIER           	263	// Pas de porteuse.
 #define TXT_LINE_BUSY            	264	// Ligne occup‚e.
 #define TXT_NUMBER_INVALID       	265	// Num‚ro incorrect.
 #define TXT_SYSTEM_NOT_RESPONDING	266	// L'autre systŠme ne r‚pond
 #define TXT_OUT_OF_SYNC          	267	// Mauvaise synchronisation !
 #define TXT_PACKET_TOO_LATE      	268	// Paquet re‡u trop tard !
-#define TXT_PLAYER_LEFT_GAME     	269	// L'autre joueur a quitt‚ le
+#define TXT_PLAYER_LEFT_GAME     	269	// L'autre joueur a quitt?le
 #define TXT_FROM                 	270	// De %s:%s
 #define TXT_SCORE_TIME           	271	// TEMPS :
 #define TXT_SCORE_LEAD           	272	// COMMANDEMENT :
@@ -298,7 +298,7 @@
 #define TXT_SCORE_TIMEFORMAT1    	282	// %dh %dm
 #define TXT_SCORE_TIMEFORMAT2    	283	// %dm
 #define TXT_DIALING              	284	// Appel...
-#define TXT_DIALING_CANCELED     	285	// Appel annul‚
+#define TXT_DIALING_CANCELED     	285	// Appel annul?
 #define TXT_WAITING_FOR_CALL     	286	// Attente d'appel...
 #define TXT_ANSWERING_CANCELED   	287	// Attente d'appel annul‚e
 #define TXT_E6                   	288	// Ing‚nieurs
@@ -332,13 +332,13 @@
 #define TXT_NAME_MUSTBE_UNIQUE   	316	// Les noms doivent ˆtre tous
 #define TXT_RECONNECTING_TO      	317	// Reconnexion vers %s
 #define TXT_WAITING_FOR_CONNECTIONS	318	// Attente de connexions...
-#define TXT_TIME_ALLOWED         	319	// Temps autoris‚ : %02d
+#define TXT_TIME_ALLOWED         	319	// Temps autoris?: %02d
 #define TXT_PRESS_ESC            	320	// Appuyez sur Echap pour
 #define TXT_JUST_YOU_AND_ME      	321	// De l'ordinateur : Il ne
 #define TXT_CAPTURE_THE_FLAG_COLON	322	// Capture du drapeau :
 #define TXT_CHAN                 	323	// Agent Sp‚cial 2
-#define TXT_HAS_ALLIED           	324	// %s s'est alli‚(e) avec %s
-#define TXT_AT_WAR               	325	// %s d‚clare la guerre … %s
+#define TXT_HAS_ALLIED           	324	// %s s'est alli?e) avec %s
+#define TXT_AT_WAR               	325	// %s d‚clare la guerre ?%s
 #define TXT_SEL_TARGET           	326	// Choisissez un cible
 #define TXT_RESIGN               	327	// Abandonner
 #define TXT_TIBERIUM_FAST        	328	// Le minerai pousse trŠs
@@ -348,8 +348,8 @@
 #define TXT_POWER_OUTPUT         	332	// Production d'‚nergie
 #define TXT_POWER_OUTPUT_LOW     	333	// Production d'‚nergie
 #define TXT_CONTINUE             	334	// Continuer
-#define TXT_QUEUE_FULL           	335	// Saturation des donn‚es …
-#define TXT_SPECIAL_WARNING      	336	// %s a modifi‚ les options de
+#define TXT_QUEUE_FULL           	335	// Saturation des donn‚es ?
+#define TXT_SPECIAL_WARNING      	336	// %s a modifi?les options de
 #define TXT_CD_DIALOG_1          	337	// Placez un CD d'Alerte Rouge
 #define TXT_CD_DIALOG_2          	338	// Placez le CD %d (%s) dans
 #define TXT_CD_ERROR1            	339	// Alerte Rouge n'a pas
@@ -366,7 +366,7 @@
 #define TXT_SPACE_CANT_SAVE      	350	// Espace disque insuffisant
 #define TXT_INVALID_PORT_ADDRESS 	351	// Port/Adresse invalide. COM
 #define TXT_INVALID_SETTINGS     	352	// paramŠtres Port et/ou IRQ
-#define TXT_IRQ_ALREADY_IN_USE   	353	// IRQ d‚j… utilis‚
+#define TXT_IRQ_ALREADY_IN_USE   	353	// IRQ d‚j?utilis?
 #define TXT_ABORT                	354	// Oui
 #define TXT_RESTART              	355	// Recommencer
 #define TXT_RESTARTING           	356	// Mission relanc‚e. Attendez
@@ -380,7 +380,7 @@
 #define TXT_MRJ                  	364	// Brouilleur de radar
 #define TXT_GAP_GENERATOR        	365	// G‚n‚rateur d'ombre
 #define TXT_PILLBOX              	366	// Bunker
-#define TXT_CAMOPILLBOX          	367	// Bunker camoufl‚
+#define TXT_CAMOPILLBOX          	367	// Bunker camoufl?
 #define TXT_CHRONOSPHERE         	368	// ChronosphŠre
 #define TXT_ENGLAND              	369	// Roy. Uni
 #define TXT_GERMANY              	370	// Allemagne
@@ -404,8 +404,8 @@
 #define TXT_MUST_SELECT_GAME     	388	// Vous devez s‚lectionner une
 #define TXT_S_PLAYING_S          	389	// %s joue contre %s
 #define TXT_ONLY_HOST_CAN_MODIFY 	390	// Seul l'h“te peut modifier
-#define TXT_GAME_CANCELLED       	391	// La partie a ‚t‚ annul‚e.
-#define TXT_S_FORMED_NEW_GAME    	392	// %s a initi‚ une nouvelle
+#define TXT_GAME_CANCELLED       	391	// La partie a ‚t?annul‚e.
+#define TXT_S_FORMED_NEW_GAME    	392	// %s a initi?une nouvelle
 #define TXT_GAME_NOW_IN_PROGRESS 	393	// La partie de %s est
 #define TXT_TESLA                	394	// Bobine de Tesla
 #define TXT_MGG                  	395	// G‚n‚rateur d'ombre mobile
@@ -436,9 +436,9 @@
 #define TXT_INFANTRY             	420	// Infanterie
 #define TXT_AIRCRAFT             	421	// Avion
 #define TXT_TRUCK                	422	// Camion d'approvisionnement
-#define TXT_INVUL                	423	// Module d'invuln‚rabilit‚
+#define TXT_INVUL                	423	// Module d'invuln‚rabilit?
 #define TXT_IRON_CURTAIN         	424	// Rideau de Fer
-#define TXT_ADVANCED_TECH        	425	// Centre technique avanc‚
+#define TXT_ADVANCED_TECH        	425	// Centre technique avanc?
 #define TXT_V2_LAUNCHER          	426	// Lance-roquettes V2
 #define TXT_FORWARD_COM          	427	// Poste de commandement
 #define TXT_DEMOLITIONER         	428	// Bombardeur
@@ -515,14 +515,14 @@
 #define TXT_NO_FLOW_CONTROL_RESPONSE	499	// Erreur - Le modem n'a pas
 #define TXT_NO_COMPRESSION_RESPONSE	500	// Erreur - Le modem n'a pas
 #define TXT_NO_ERROR_CORRECTION_RESPONSE	501	// Erreur - Le modem n'a pas
-#define TXT_EXPLAIN_REGISTRATION 	502	// Pour jouer … Alerte Rouge
+#define TXT_EXPLAIN_REGISTRATION 	502	// Pour jouer ?Alerte Rouge
 #define TXT_ERROR_UNABLE_TO_RUN_WCHAT	503	// Erreur - Impossible
 #define TXT_REGISTER             	504	// Enregistrer
 #define TXT_ORE_MINE             	505	// Gisement Minerai
-#define TXT_NO_REGISTERED_MODEM  	506	// Aucun modem configur‚
+#define TXT_NO_REGISTERED_MODEM  	506	// Aucun modem configur?
 #define TXT_CHRONOSHIFT          	507	// D‚placement chronoporte
 #define TXT_UNABLE_TO_OPEN_PORT  	508	// Adresse invalide ou en
-#define TXT_NO_DIAL_TONE         	509	// Pas de tonalit‚.
+#define TXT_NO_DIAL_TONE         	509	// Pas de tonalit?
 #define TXT_NO_EXPANSION_SCENARIO	510	// Erreur - L'autre joueur n'a
 #define TXT_STAND_BY             	511	// Patientez SVP...
 #define TXT_THEME_CREDITS        	512	// Musique du g‚n‚rique de fin
@@ -538,10 +538,10 @@
 #define TXT_DATA_COMPRESSION     	522	// Compression des Donn‚es
 #define TXT_ERROR_CORRECTION     	523	// Correction d'Erreur
 #define TXT_HARDWARE_FLOW_CONTROL	524	// Contr“le Mat‚riel du Flux
-#define TXT_ADVANCED             	525	// Avanc‚
+#define TXT_ADVANCED             	525	// Avanc?
 #define TXT_THEME_2ND_HAND       	526	// Seconde main
 #define TXT_THEME_ARAZOID        	527	// Arazo‹de
-#define TXT_THEME_BACKSTAB       	528	// Retour … l'envoyeur
+#define TXT_THEME_BACKSTAB       	528	// Retour ?l'envoyeur
 #define TXT_THEME_CHAOS2         	529	// Chaos2
 #define TXT_THEME_SHUT_IT        	530	// Fermez-la !
 #define TXT_THEME_TWINMIX1       	531	// Visite de courtoisie
@@ -562,7 +562,7 @@
 #define TXT_THEME_BOG            	546	// Mar‚cages
 #define TXT_THEME_FLOAT_V2       	547	// Volutes
 #define TXT_THEME_GLOOM          	548	// T‚nŠbres
-#define TXT_THEME_GRNDWIRE       	549	// Terrain min‚
+#define TXT_THEME_GRNDWIRE       	549	// Terrain min?
 #define TXT_THEME_RPT            	550	// M‚caniciens 2
 #define TXT_THEME_SEARCH         	551	// Battue
 #define TXT_THEME_TRACTION       	552	// Traction
