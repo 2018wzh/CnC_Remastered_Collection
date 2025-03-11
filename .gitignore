@@ -1,6 +1,7 @@
 
 # Visual Studio files
 .vs/
+.vscode/
 *.user
 
 # Output object and binary folders

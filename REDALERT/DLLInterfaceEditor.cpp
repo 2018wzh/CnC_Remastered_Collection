@@ -25,17 +25,17 @@
 #include	"mixfile.h"
 #include "ccini.H"
 
-extern "C" __declspec(dllexport) int __cdecl CNC_Editor_Startup();
-extern "C" __declspec(dllexport) int __cdecl CNC_Editor_Cleanup();
-extern "C" __declspec(dllexport) int __cdecl CNC_Editor_Load_Map(char* cncdata_directory, char* house_name, int scenario_index, char* east_west, char* variant);
-extern "C" __declspec(dllexport) int __cdecl CNC_Editor_Load_Map_By_Scenario_Name(char* cncdata_directory, char* scenario_name);
-extern "C" __declspec(dllexport) int __cdecl CNC_Editor_Clear_Map();
-extern "C" __declspec(dllexport) int __cdecl CNC_Editor_Get_Map_Stats(int& map_width, int& map_height, int& theater);
-extern "C" __declspec(dllexport) int __cdecl CNC_Editor_Get_Cell_Data_By_Index(int cell_index, char* cell_name, unsigned long cell_name_size, int& template_type, int& template_icon_index);
-extern "C" __declspec(dllexport) int __cdecl CNC_Editor_Get_Cell_Data(int x, int y, char* cell_name, unsigned long cell_name_size, int& template_type, int& template_icon_index);
-extern "C" __declspec(dllexport) int __cdecl CNC_Editor_Get_Cell_Texture_Buffer(int x, int y, int& out_width, int& out_height, SAFEARRAY*& out_texture_array);
-extern "C" __declspec(dllexport) int __cdecl CNC_Editor_Get_Scenario_Names(char* cncdata_directory);
-extern "C" __declspec(dllexport) int __cdecl CNC_Editor_Get_Template_Data(int template_type_index, SAFEARRAY*& template_points);
+extern "C" CROSS_PLATFORM_API int __cdecl CNC_Editor_Startup();
+extern "C" CROSS_PLATFORM_API int __cdecl CNC_Editor_Cleanup();
+extern "C" CROSS_PLATFORM_API int __cdecl CNC_Editor_Load_Map(char* cncdata_directory, char* house_name, int scenario_index, char* east_west, char* variant);
+extern "C" CROSS_PLATFORM_API int __cdecl CNC_Editor_Load_Map_By_Scenario_Name(char* cncdata_directory, char* scenario_name);
+extern "C" CROSS_PLATFORM_API int __cdecl CNC_Editor_Clear_Map();
+extern "C" CROSS_PLATFORM_API int __cdecl CNC_Editor_Get_Map_Stats(int& map_width, int& map_height, int& theater);
+extern "C" CROSS_PLATFORM_API int __cdecl CNC_Editor_Get_Cell_Data_By_Index(int cell_index, char* cell_name, unsigned long cell_name_size, int& template_type, int& template_icon_index);
+extern "C" CROSS_PLATFORM_API int __cdecl CNC_Editor_Get_Cell_Data(int x, int y, char* cell_name, unsigned long cell_name_size, int& template_type, int& template_icon_index);
+extern "C" CROSS_PLATFORM_API int __cdecl CNC_Editor_Get_Cell_Texture_Buffer(int x, int y, int& out_width, int& out_height, SAFEARRAY*& out_texture_array);
+extern "C" CROSS_PLATFORM_API int __cdecl CNC_Editor_Get_Scenario_Names(char* cncdata_directory);
+extern "C" CROSS_PLATFORM_API int __cdecl CNC_Editor_Get_Template_Data(int template_type_index, SAFEARRAY*& template_points);
 
 int LoadScenario();
 
@@ -57,7 +57,7 @@ char RedAlertINI[_MAX_PATH];
 * CNC_Editor_Startup
 * Initializes the system to allow map loading for the editor
 **************************************************************************************************/
-extern "C" __declspec(dllexport) int __cdecl CNC_Editor_Startup()
+extern "C" CROSS_PLATFORM_API int __cdecl CNC_Editor_Startup()
 {
 	/*
 	BlackPalette = new(MEM_CLEAR | MEM_REAL) unsigned char[768];
@@ -83,7 +83,7 @@ extern "C" __declspec(dllexport) int __cdecl CNC_Editor_Startup()
 * CNC_Editor_Cleanup
 * Cleans up systems initialized by the editor
 **************************************************************************************************/
-extern "C" __declspec(dllexport) int __cdecl CNC_Editor_Cleanup()
+extern "C" CROSS_PLATFORM_API int __cdecl CNC_Editor_Cleanup()
 {
 	/*
 	if (BlackPalette)
@@ -202,7 +202,7 @@ void CNC_Editor_Setup_Content_Directory(char* cncdata_directory, int CD, char (&
 *
 * returns EDITOR_COMMMAND_SUCCESS on success, all other values are failure
 **************************************************************************************************/
-extern "C" __declspec(dllexport) int __cdecl CNC_Editor_Load_Map(
+extern "C" CROSS_PLATFORM_API int __cdecl CNC_Editor_Load_Map(
 	char* cncdata_directory,
 	char* house_name,
 	int scenario_index,
@@ -329,7 +329,7 @@ extern "C" __declspec(dllexport) int __cdecl CNC_Editor_Load_Map(
 *
 * returns EDITOR_COMMMAND_SUCCESS on success, all other values are failure
 **************************************************************************************************/
-extern "C" __declspec(dllexport) int __cdecl CNC_Editor_Load_Map_By_Scenario_Name(
+extern "C" CROSS_PLATFORM_API int __cdecl CNC_Editor_Load_Map_By_Scenario_Name(
 	char* cncdata_directory,
 	char* scenario_name)
 {
@@ -404,7 +404,7 @@ int LoadScenario()
 *
 * returns EDITOR_COMMMAND_SUCCESS on success, all other values are failure
 **************************************************************************************************/
-extern "C" __declspec(dllexport) int __cdecl CNC_Editor_Clear_Map()
+extern "C" CROSS_PLATFORM_API int __cdecl CNC_Editor_Clear_Map()
 {
 	if (EditorMapInitialized)
 	{
@@ -431,7 +431,7 @@ extern "C" __declspec(dllexport) int __cdecl CNC_Editor_Clear_Map()
 *
 * returns EDITOR_COMMMAND_SUCCESS on success, all other values are failure
 **************************************************************************************************/
-extern "C" __declspec(dllexport) int __cdecl CNC_Editor_Get_Map_Stats(int& map_width, int& map_height, int& theater)
+extern "C" CROSS_PLATFORM_API int __cdecl CNC_Editor_Get_Map_Stats(int& map_width, int& map_height, int& theater)
 {
 	if (EditorMapInitialized)
 	{
@@ -458,7 +458,7 @@ extern "C" __declspec(dllexport) int __cdecl CNC_Editor_Get_Map_Stats(int& map_w
 *
 * returns EDITOR_COMMMAND_SUCCESS on success, all other values are failure
 **************************************************************************************************/
-extern "C" __declspec(dllexport) int __cdecl CNC_Editor_Get_Cell_Data_By_Index(int cell_index, char* cell_name, unsigned long cell_name_size, int& template_type, int& template_icon_index)
+extern "C" CROSS_PLATFORM_API int __cdecl CNC_Editor_Get_Cell_Data_By_Index(int cell_index, char* cell_name, unsigned long cell_name_size, int& template_type, int& template_icon_index)
 {
 	CELL index = (CELL)cell_index;
 
@@ -495,7 +495,7 @@ extern "C" __declspec(dllexport) int __cdecl CNC_Editor_Get_Cell_Data_By_Index(i
 * returns EDITOR_COMMMAND_SUCCESS on success, all other values are failure
 **************************************************************************************************/
 
-extern "C" __declspec(dllexport) int __cdecl CNC_Editor_Get_Cell_Data(int x, int y, char* cell_name, unsigned long cell_name_size, int& template_type, int& template_icon_index)
+extern "C" CROSS_PLATFORM_API int __cdecl CNC_Editor_Get_Cell_Data(int x, int y, char* cell_name, unsigned long cell_name_size, int& template_type, int& template_icon_index)
 {
 	if (!EditorMapInitialized)
 	{
@@ -539,7 +539,7 @@ extern "C" __declspec(dllexport) int __cdecl CNC_Editor_Get_Cell_Data(int x, int
 * out_texture_array: output array of unsigned chars storing the color data for the requested object,
 *							every 3 chars is a set of RGB values
 **************************************************************************************************/
-extern "C" __declspec(dllexport) int __cdecl CNC_Editor_Get_Cell_Texture_Buffer(int x, int y, int& out_width, int& out_height, SAFEARRAY*& out_texture_array)
+extern "C" CROSS_PLATFORM_API int __cdecl CNC_Editor_Get_Cell_Texture_Buffer(int x, int y, int& out_width, int& out_height, SAFEARRAY*& out_texture_array)
 {
 
 	int map_cell_x = Map.MapCellX;
@@ -643,7 +643,7 @@ extern "C" __declspec(dllexport) int __cdecl CNC_Editor_Get_Cell_Texture_Buffer(
 *
 * returns EDITOR_COMMMAND_SUCCESS on success, all other values are failure
 **************************************************************************************************/
-extern "C" __declspec(dllexport) int __cdecl CNC_Editor_Get_Template_Data(int template_type_index, SAFEARRAY*& template_points)
+extern "C" CROSS_PLATFORM_API int __cdecl CNC_Editor_Get_Template_Data(int template_type_index, SAFEARRAY*& template_points)
 {
 	if (template_type_index >= TEMPLATE_COUNT || template_type_index == TEMPLATE_NONE)
 	{
@@ -696,7 +696,7 @@ extern "C" __declspec(dllexport) int __cdecl CNC_Editor_Get_Template_Data(int te
 	return EDITOR_COMMMAND_FAILURE;
 }
 
-extern "C" __declspec(dllexport) int __cdecl CNC_Editor_Get_Scenario_Names(char* cncdata_directory)
+extern "C" CROSS_PLATFORM_API int __cdecl CNC_Editor_Get_Scenario_Names(char* cncdata_directory)
 {
 	char content_directory[_MAX_PATH];
 

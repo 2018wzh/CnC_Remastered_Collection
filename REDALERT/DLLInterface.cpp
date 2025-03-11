@@ -119,39 +119,39 @@ typedef enum {
 ** 
 ** 
 */
-extern "C" __declspec(dllexport) unsigned int __cdecl CNC_Version(unsigned int version_in);
-extern "C" __declspec(dllexport) void __cdecl CNC_Init(const char *command_line, CNC_Event_Callback_Type event_callback);
-extern "C" __declspec(dllexport) void __cdecl CNC_Config(const CNCRulesDataStruct& rules);
-extern "C" __declspec(dllexport) void __cdecl CNC_Add_Mod_Path(const char *mod_path);
-extern "C" __declspec(dllexport) bool __cdecl CNC_Get_Visible_Page(unsigned char *buffer_in, unsigned int &width, unsigned int &height);
-extern "C" __declspec(dllexport) bool __cdecl CNC_Get_Palette(unsigned char(&palette_in)[256][3]);
-extern "C" __declspec(dllexport) bool __cdecl CNC_Start_Instance(int scenario_index, int build_level, const char *faction, const char *game_type, const char *content_directory, int sabotaged_structure, const char *override_map_name);
-extern "C" __declspec(dllexport) bool __cdecl CNC_Start_Instance_Variation(int scenario_index, int scenario_variation, int scenario_direction, int build_level, const char *faction, const char *game_type, const char *content_directory, int sabotaged_structure, const char *override_map_name);
-extern "C" __declspec(dllexport) bool __cdecl CNC_Start_Custom_Instance(const char* content_directory, const char* directory_path, const char* scenario_name, int build_level, bool multiplayer);
-extern "C" __declspec(dllexport) bool __cdecl CNC_Advance_Instance(uint64 player_id);
-extern "C" __declspec(dllexport) bool __cdecl CNC_Get_Game_State(GameStateRequestEnum state_type, uint64 player_id, unsigned char *buffer_in, unsigned int buffer_size);
-extern "C" __declspec(dllexport) bool __cdecl CNC_Read_INI(int scenario_index, int scenario_variation, int scenario_direction, const char *content_directory, const char *override_map_name, char *ini_buffer, int _ini_buffer_size);
-extern "C" __declspec(dllexport) void __cdecl CNC_Set_Home_Cell(int x, int y, uint64 player_id);
-extern "C" __declspec(dllexport) void __cdecl CNC_Handle_Game_Request(GameRequestEnum request_type);
-extern "C" __declspec(dllexport) void __cdecl CNC_Handle_Game_Settings_Request(int health_bar_display_mode, int resource_bar_display_mode);
-extern "C" __declspec(dllexport) void __cdecl CNC_Handle_Input(InputRequestEnum mouse_event, unsigned char special_key_flags, uint64 player_id, int x1, int y1, int x2, int y2);
-extern "C" __declspec(dllexport) void __cdecl CNC_Handle_Structure_Request(StructureRequestEnum request_type, uint64 player_id, int object_id);
-extern "C" __declspec(dllexport) void __cdecl CNC_Handle_Unit_Request(UnitRequestEnum request_type, uint64 player_id);
-extern "C" __declspec(dllexport) void __cdecl CNC_Handle_Sidebar_Request(SidebarRequestEnum request_type, uint64 player_id, int buildable_type, int buildable_id, short cell_x, short cell_y);
-extern "C" __declspec(dllexport) void __cdecl CNC_Handle_SuperWeapon_Request(SuperWeaponRequestEnum request_type, uint64 player_id, int buildable_type, int buildable_id, int x1, int y1);
-extern "C" __declspec(dllexport) void __cdecl CNC_Handle_ControlGroup_Request(ControlGroupRequestEnum request_type, uint64 player_id, unsigned char control_group_index);
-extern "C" __declspec(dllexport) void __cdecl CNC_Handle_Debug_Request(DebugRequestEnum debug_request_type, uint64 player_id, const char *object_name, int x, int y, bool unshroud, bool enemy);
-extern "C" __declspec(dllexport) void __cdecl CNC_Handle_Beacon_Request(BeaconRequestEnum beacon_request_type, uint64 player_id, int pixel_x, int pixel_y);
-extern "C" __declspec(dllexport) bool __cdecl CNC_Set_Multiplayer_Data(int scenario_index, CNCMultiplayerOptionsStruct &game_options, int num_players, CNCPlayerInfoStruct *player_list, int max_players);
-extern "C" __declspec(dllexport) bool __cdecl CNC_Clear_Object_Selection(uint64 player_id);
-extern "C" __declspec(dllexport) bool __cdecl CNC_Select_Object(uint64 player_id, int object_type_id, int object_to_select_id);
-extern "C" __declspec(dllexport) bool __cdecl CNC_Save_Load(bool save, const char *file_path_and_name, const char *game_type);
-extern "C" __declspec(dllexport) void __cdecl CNC_Set_Difficulty(int difficulty);
-extern "C" __declspec(dllexport) void __cdecl CNC_Restore_Carryover_Objects(const CarryoverObjectStruct* objects);
-extern "C" __declspec(dllexport) void __cdecl CNC_Handle_Player_Switch_To_AI(uint64 player_id);
-extern "C" __declspec(dllexport) void __cdecl CNC_Handle_Human_Team_Wins(uint64 player_id);
-extern "C" __declspec(dllexport) void __cdecl CNC_Start_Mission_Timer(int time);
-extern "C" __declspec(dllexport) bool __cdecl CNC_Get_Start_Game_Info(uint64 player_id, int &start_location_waypoint_index);
+extern "C" CROSS_PLATFORM_API unsigned int __cdecl CNC_Version(unsigned int version_in);
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Init(const char *command_line, CNC_Event_Callback_Type event_callback);
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Config(const CNCRulesDataStruct& rules);
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Add_Mod_Path(const char *mod_path);
+extern "C" CROSS_PLATFORM_API bool __cdecl CNC_Get_Visible_Page(unsigned char *buffer_in, unsigned int &width, unsigned int &height);
+extern "C" CROSS_PLATFORM_API bool __cdecl CNC_Get_Palette(unsigned char(&palette_in)[256][3]);
+extern "C" CROSS_PLATFORM_API bool __cdecl CNC_Start_Instance(int scenario_index, int build_level, const char *faction, const char *game_type, const char *content_directory, int sabotaged_structure, const char *override_map_name);
+extern "C" CROSS_PLATFORM_API bool __cdecl CNC_Start_Instance_Variation(int scenario_index, int scenario_variation, int scenario_direction, int build_level, const char *faction, const char *game_type, const char *content_directory, int sabotaged_structure, const char *override_map_name);
+extern "C" CROSS_PLATFORM_API bool __cdecl CNC_Start_Custom_Instance(const char* content_directory, const char* directory_path, const char* scenario_name, int build_level, bool multiplayer);
+extern "C" CROSS_PLATFORM_API bool __cdecl CNC_Advance_Instance(uint64 player_id);
+extern "C" CROSS_PLATFORM_API bool __cdecl CNC_Get_Game_State(GameStateRequestEnum state_type, uint64 player_id, unsigned char *buffer_in, unsigned int buffer_size);
+extern "C" CROSS_PLATFORM_API bool __cdecl CNC_Read_INI(int scenario_index, int scenario_variation, int scenario_direction, const char *content_directory, const char *override_map_name, char *ini_buffer, int _ini_buffer_size);
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Set_Home_Cell(int x, int y, uint64 player_id);
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Handle_Game_Request(GameRequestEnum request_type);
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Handle_Game_Settings_Request(int health_bar_display_mode, int resource_bar_display_mode);
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Handle_Input(InputRequestEnum mouse_event, unsigned char special_key_flags, uint64 player_id, int x1, int y1, int x2, int y2);
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Handle_Structure_Request(StructureRequestEnum request_type, uint64 player_id, int object_id);
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Handle_Unit_Request(UnitRequestEnum request_type, uint64 player_id);
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Handle_Sidebar_Request(SidebarRequestEnum request_type, uint64 player_id, int buildable_type, int buildable_id, short cell_x, short cell_y);
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Handle_SuperWeapon_Request(SuperWeaponRequestEnum request_type, uint64 player_id, int buildable_type, int buildable_id, int x1, int y1);
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Handle_ControlGroup_Request(ControlGroupRequestEnum request_type, uint64 player_id, unsigned char control_group_index);
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Handle_Debug_Request(DebugRequestEnum debug_request_type, uint64 player_id, const char *object_name, int x, int y, bool unshroud, bool enemy);
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Handle_Beacon_Request(BeaconRequestEnum beacon_request_type, uint64 player_id, int pixel_x, int pixel_y);
+extern "C" CROSS_PLATFORM_API bool __cdecl CNC_Set_Multiplayer_Data(int scenario_index, CNCMultiplayerOptionsStruct &game_options, int num_players, CNCPlayerInfoStruct *player_list, int max_players);
+extern "C" CROSS_PLATFORM_API bool __cdecl CNC_Clear_Object_Selection(uint64 player_id);
+extern "C" CROSS_PLATFORM_API bool __cdecl CNC_Select_Object(uint64 player_id, int object_type_id, int object_to_select_id);
+extern "C" CROSS_PLATFORM_API bool __cdecl CNC_Save_Load(bool save, const char *file_path_and_name, const char *game_type);
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Set_Difficulty(int difficulty);
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Restore_Carryover_Objects(const CarryoverObjectStruct* objects);
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Handle_Player_Switch_To_AI(uint64 player_id);
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Handle_Human_Team_Wins(uint64 player_id);
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Start_Mission_Timer(int time);
+extern "C" CROSS_PLATFORM_API bool __cdecl CNC_Get_Start_Game_Info(uint64 player_id, int &start_location_waypoint_index);
 
 
 
@@ -593,7 +593,7 @@ void On_Achievement_Event(const HouseClass* player_ptr, const char *achievement_
 *
 * History: 4/9/2020 2:12PM - ST
 **************************************************************************************************/
-extern "C" __declspec(dllexport) unsigned int __cdecl CNC_Version(unsigned int version_in)
+extern "C" CROSS_PLATFORM_API unsigned int __cdecl CNC_Version(unsigned int version_in)
 {
 	// Unreferenced, but potentially useful to know which version the server is expecting
 	version_in;
@@ -614,7 +614,7 @@ extern "C" __declspec(dllexport) unsigned int __cdecl CNC_Version(unsigned int v
 *
 * History: 1/3/2019 11:33AM - ST
 **************************************************************************************************/
-extern "C" __declspec(dllexport) void __cdecl CNC_Init(const char *command_line, CNC_Event_Callback_Type event_callback)
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Init(const char *command_line, CNC_Event_Callback_Type event_callback)
 {
 	DLLExportClass::Set_Content_Directory(NULL);
 		  
@@ -658,7 +658,7 @@ void DLL_Shutdown(void)
 *
 * History: 10/03/2019 - SKY
 **************************************************************************************************/
-extern "C" __declspec(dllexport) void __cdecl CNC_Config(const CNCRulesDataStruct& rules)
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Config(const CNCRulesDataStruct& rules)
 {
 	DLLExportClass::Config(rules);
 }
@@ -677,7 +677,7 @@ extern "C" __declspec(dllexport) void __cdecl CNC_Config(const CNCRulesDataStruc
 *
 * History: 2/20/2020 2:04PM - ST
 **************************************************************************************************/
-extern "C" __declspec(dllexport) void __cdecl CNC_Add_Mod_Path(const char *mod_path)
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Add_Mod_Path(const char *mod_path)
 {
 	DLLExportClass::Add_Mod_Path(mod_path);
 }
@@ -697,7 +697,7 @@ extern "C" __declspec(dllexport) void __cdecl CNC_Add_Mod_Path(const char *mod_p
 *
 * History: 1/3/2019 11:33AM - ST
 **************************************************************************************************/
-extern "C" __declspec(dllexport) bool __cdecl CNC_Get_Visible_Page(unsigned char *buffer_in, unsigned int &width, unsigned int &height)
+extern "C" CROSS_PLATFORM_API bool __cdecl CNC_Get_Visible_Page(unsigned char *buffer_in, unsigned int &width, unsigned int &height)
 {
 	if (!DLLExportClass::Legacy_Render_Enabled() || (buffer_in == NULL)) {
 		return false;
@@ -739,7 +739,7 @@ extern "C" __declspec(dllexport) bool __cdecl CNC_Get_Visible_Page(unsigned char
 
 
 
-extern "C" __declspec(dllexport) bool __cdecl CNC_Get_Palette(unsigned char(&palette_in)[256][3])
+extern "C" CROSS_PLATFORM_API bool __cdecl CNC_Get_Palette(unsigned char(&palette_in)[256][3])
 {
 	memcpy(palette_in, CurrentPalette, sizeof(palette_in));
 	return true;
@@ -759,7 +759,7 @@ extern "C" __declspec(dllexport) bool __cdecl CNC_Get_Palette(unsigned char(&pal
 *
 * History: 1/7/2019 5:20PM - ST
 **************************************************************************************************/
-extern "C" __declspec(dllexport) bool __cdecl CNC_Set_Multiplayer_Data(int scenario_index, CNCMultiplayerOptionsStruct &game_options, int num_players, CNCPlayerInfoStruct *player_list, int max_players)
+extern "C" CROSS_PLATFORM_API bool __cdecl CNC_Set_Multiplayer_Data(int scenario_index, CNCMultiplayerOptionsStruct &game_options, int num_players, CNCPlayerInfoStruct *player_list, int max_players)
 {
 	
 	if (num_players <= 0) {
@@ -858,7 +858,7 @@ extern "C" __declspec(dllexport) bool __cdecl CNC_Set_Multiplayer_Data(int scena
 	return true;
 }
 
-extern "C" __declspec(dllexport) bool __cdecl CNC_Clear_Object_Selection(uint64 player_id)
+extern "C" CROSS_PLATFORM_API bool __cdecl CNC_Clear_Object_Selection(uint64 player_id)
 {
 	if (!DLLExportClass::Set_Player_Context(player_id)) {
 		return false;
@@ -869,7 +869,7 @@ extern "C" __declspec(dllexport) bool __cdecl CNC_Clear_Object_Selection(uint64 
 	return true;
 }
 
-extern "C" __declspec(dllexport) bool __cdecl CNC_Select_Object(uint64 player_id, int object_type_id, int object_to_select_id)
+extern "C" CROSS_PLATFORM_API bool __cdecl CNC_Select_Object(uint64 player_id, int object_type_id, int object_to_select_id)
 {
 	if (!DLLExportClass::Set_Player_Context(player_id)) {
 		return false;
@@ -1193,7 +1193,7 @@ void GlyphX_Assign_Houses(void)
 *
 * History: 2/14/2020 - LLL
 **************************************************************************************************/
-extern "C" __declspec(dllexport) void __cdecl CNC_Set_Home_Cell(int x, int y, uint64 player_id)
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Set_Home_Cell(int x, int y, uint64 player_id)
 {
 	DLLExportClass::Set_Home_Cell(x, y, player_id);
 }
@@ -1210,7 +1210,7 @@ extern "C" __declspec(dllexport) void __cdecl CNC_Set_Home_Cell(int x, int y, ui
 *
 * History: 7/10/2019 - LLL
 **************************************************************************************************/
-extern "C" __declspec(dllexport) bool __cdecl CNC_Start_Instance(int scenario_index, int build_level, const char *faction, const char *game_type, const char *content_directory, int sabotaged_structure, const char *override_map_name)
+extern "C" CROSS_PLATFORM_API bool __cdecl CNC_Start_Instance(int scenario_index, int build_level, const char *faction, const char *game_type, const char *content_directory, int sabotaged_structure, const char *override_map_name)
 {
 	return CNC_Start_Instance_Variation(scenario_index, (int)SCEN_VAR_NONE, (int)SCEN_DIR_EAST, build_level, faction, game_type, content_directory, sabotaged_structure, override_map_name);
 }
@@ -1228,7 +1228,7 @@ extern "C" __declspec(dllexport) bool __cdecl CNC_Start_Instance(int scenario_in
 *
 * History: 1/7/2019 5:20PM - ST
 **************************************************************************************************/
-extern "C" __declspec(dllexport) bool __cdecl CNC_Start_Instance_Variation(int scenario_index, int scenario_variation, int scenario_direction,	int build_level, const char *faction, const char *game_type, const char *content_directory, int sabotaged_structure, const char *override_map_name)
+extern "C" CROSS_PLATFORM_API bool __cdecl CNC_Start_Instance_Variation(int scenario_index, int scenario_variation, int scenario_direction,	int build_level, const char *faction, const char *game_type, const char *content_directory, int sabotaged_structure, const char *override_map_name)
 {
 	if (game_type == NULL) {
 		return false;
@@ -1382,7 +1382,7 @@ extern "C" __declspec(dllexport) bool __cdecl CNC_Start_Instance_Variation(int s
 *
 * History: 12/16/2019 11:44AM - ST
 **************************************************************************************************/
-extern "C" __declspec(dllexport) bool __cdecl CNC_Read_INI(int scenario_index, int scenario_variation, int scenario_direction, const char *content_directory, const char *override_map_name, char *ini_buffer, int _ini_buffer_size)
+extern "C" CROSS_PLATFORM_API bool __cdecl CNC_Read_INI(int scenario_index, int scenario_variation, int scenario_direction, const char *content_directory, const char *override_map_name, char *ini_buffer, int _ini_buffer_size)
 {
 	if (content_directory == NULL) {
 		return false;
@@ -1458,7 +1458,7 @@ extern "C" __declspec(dllexport) bool __cdecl CNC_Read_INI(int scenario_index, i
 *
 * History: 2019/10/28 - JAS
 **************************************************************************************************/
-extern "C" __declspec(dllexport) bool __cdecl CNC_Start_Custom_Instance(const char* content_directory, const char* directory_path, const char* scenario_name, int build_level, bool multiplayer)
+extern "C" CROSS_PLATFORM_API bool __cdecl CNC_Start_Custom_Instance(const char* content_directory, const char* directory_path, const char* scenario_name, int build_level, bool multiplayer)
 {
 
 	DLLExportClass::Set_Content_Directory(content_directory);
@@ -1668,7 +1668,7 @@ bool Debug_Write_Shape(const char *file_name, void const * shapefile, int shapen
 *
 * History: 1/7/2019 5:20PM - ST
 **************************************************************************************************/
-extern "C" __declspec(dllexport) bool __cdecl CNC_Advance_Instance(uint64 player_id)
+extern "C" CROSS_PLATFORM_API bool __cdecl CNC_Advance_Instance(uint64 player_id)
 {
 	//DLLExportClass::Set_Event_Callback(event_callback);
 
@@ -1910,7 +1910,7 @@ extern "C" __declspec(dllexport) bool __cdecl CNC_Advance_Instance(uint64 player
 *
 * History: 1/7/2019 5:20PM - ST
 **************************************************************************************************/
-extern "C" __declspec(dllexport) bool __cdecl CNC_Save_Load(bool save, const char *file_path_and_name, const char *game_type)
+extern "C" CROSS_PLATFORM_API bool __cdecl CNC_Save_Load(bool save, const char *file_path_and_name, const char *game_type)
 {
 	bool result = false;
 	
@@ -1971,7 +1971,7 @@ extern "C" __declspec(dllexport) bool __cdecl CNC_Save_Load(bool save, const cha
 *
 * History: 10/02/2019 - SKY
 **************************************************************************************************/
-extern "C" __declspec(dllexport) void __cdecl CNC_Set_Difficulty(int difficulty)
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Set_Difficulty(int difficulty)
 {
 	if (GAME_TO_PLAY == GAME_NORMAL) {
 		Set_Scenario_Difficulty(difficulty);
@@ -1984,7 +1984,7 @@ extern "C" __declspec(dllexport) void __cdecl CNC_Set_Difficulty(int difficulty)
 *
 * History: 11/15/2019 - LLL
 **************************************************************************************************/
-extern "C" __declspec(dllexport) void __cdecl CNC_Restore_Carryover_Objects(const CarryoverObjectStruct* objects)
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Restore_Carryover_Objects(const CarryoverObjectStruct* objects)
 {
 	//Delete the list
 	while (Carryover) {
@@ -2029,7 +2029,7 @@ extern "C" __declspec(dllexport) void __cdecl CNC_Restore_Carryover_Objects(cons
 *
 * History: 12/3/2019 1:46PM - ST
 **************************************************************************************************/
-extern "C" __declspec(dllexport) void __cdecl CNC_Handle_Player_Switch_To_AI(uint64 player_id)
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Handle_Player_Switch_To_AI(uint64 player_id)
 {
 	if (PlayerWins || PlayerLoses || DLLExportClass::Get_Game_Over()) {
 		return;
@@ -2118,7 +2118,7 @@ extern "C" __declspec(dllexport) void __cdecl CNC_Handle_Player_Switch_To_AI(uin
 *
 * History: 3/10/2020 - LLL
 **************************************************************************************************/
-extern "C" __declspec(dllexport) void __cdecl CNC_Handle_Human_Team_Wins(uint64 quitting_player_id)
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Handle_Human_Team_Wins(uint64 quitting_player_id)
 {
 	GlyphX_Debug_Print("CNC_Handle_Human_Team_Wins");
 	DLLExportClass::Force_Human_Team_Wins(quitting_player_id);
@@ -2130,7 +2130,7 @@ extern "C" __declspec(dllexport) void __cdecl CNC_Handle_Human_Team_Wins(uint64 
 *
 * History: 11/25/2019 - LLL
 **************************************************************************************************/
-extern "C" __declspec(dllexport) void __cdecl CNC_Start_Mission_Timer(int time)
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Start_Mission_Timer(int time)
 {
 	if (GameActive)
 	{
@@ -2150,7 +2150,7 @@ extern "C" __declspec(dllexport) void __cdecl CNC_Start_Mission_Timer(int time)
 *
 * History: 8/31/2020 11:37AM - ST
 **************************************************************************************************/
-extern "C" __declspec(dllexport) bool __cdecl CNC_Get_Start_Game_Info(uint64 player_id, int &start_location_waypoint_index)
+extern "C" CROSS_PLATFORM_API bool __cdecl CNC_Get_Start_Game_Info(uint64 player_id, int &start_location_waypoint_index)
 {
 	start_location_waypoint_index = 0;
 	if (!DLLExportClass::Set_Player_Context(player_id)) {
@@ -3145,7 +3145,7 @@ void DLLExportClass::Force_Human_Team_Wins(uint64 quitting_player_id)
 *
 * History: 1/7/2019 5:20PM - ST
 **************************************************************************************************/
-extern "C" __declspec(dllexport) bool __cdecl CNC_Get_Game_State(GameStateRequestEnum state_type, uint64 player_id, unsigned char *buffer_in, unsigned int buffer_size)
+extern "C" CROSS_PLATFORM_API bool __cdecl CNC_Get_Game_State(GameStateRequestEnum state_type, uint64 player_id, unsigned char *buffer_in, unsigned int buffer_size)
 {
 	bool got_state = false;
 
@@ -3281,7 +3281,7 @@ extern "C" __declspec(dllexport) bool __cdecl CNC_Get_Game_State(GameStateReques
 *
 * 7/23/2019 - LLL
 **************************************************************************************************/
-extern "C" __declspec(dllexport) void __cdecl CNC_Handle_Game_Request(GameRequestEnum request_type)
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Handle_Game_Request(GameRequestEnum request_type)
 {
 	switch (request_type)
 	{
@@ -3290,7 +3290,7 @@ extern "C" __declspec(dllexport) void __cdecl CNC_Handle_Game_Request(GameReques
 	}
 }
 
-extern "C" __declspec(dllexport) void __cdecl CNC_Handle_Game_Settings_Request(int health_bar_display_mode, int resource_bar_display_mode)
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Handle_Game_Settings_Request(int health_bar_display_mode, int resource_bar_display_mode)
 {
 	if (!DLLExportClass::Legacy_Render_Enabled()) {
 		return;
@@ -3941,7 +3941,7 @@ void DLLExportClass::Convert_Type(const ObjectClass *object, CNCObjectStruct &ob
 *
 * History: 1/7/2019 5:20PM - ST
 **************************************************************************************************/
-extern "C" __declspec(dllexport) void __cdecl CNC_Handle_Input(InputRequestEnum input_event, unsigned char special_key_flags, uint64 player_id, int x1, int y1, int x2, int y2)
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Handle_Input(InputRequestEnum input_event, unsigned char special_key_flags, uint64 player_id, int x1, int y1, int x2, int y2)
 {
 	
 	if (!DLLExportClass::Set_Player_Context(player_id)) {
@@ -4173,7 +4173,7 @@ extern "C" __declspec(dllexport) void __cdecl CNC_Handle_Input(InputRequestEnum 
 * History: 4/29/2019 - LLL
 **************************************************************************************************/
 
-extern "C" __declspec(dllexport) void __cdecl CNC_Handle_Structure_Request(StructureRequestEnum request_type, uint64 player_id, int object_id)
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Handle_Structure_Request(StructureRequestEnum request_type, uint64 player_id, int object_id)
 {
 	if (!DLLExportClass::Set_Player_Context(player_id)) {
 		return;
@@ -4215,7 +4215,7 @@ extern "C" __declspec(dllexport) void __cdecl CNC_Handle_Structure_Request(Struc
 *
 * History: 10/15/2019 - SKY
 **************************************************************************************************/
-extern "C" __declspec(dllexport) void __cdecl CNC_Handle_Unit_Request(UnitRequestEnum request_type, uint64 player_id)
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Handle_Unit_Request(UnitRequestEnum request_type, uint64 player_id)
 {
 	if (!DLLExportClass::Set_Player_Context(player_id)) {
 		return;
@@ -4268,7 +4268,7 @@ extern "C" __declspec(dllexport) void __cdecl CNC_Handle_Unit_Request(UnitReques
 *
 * History: 1/7/2019 5:20PM - ST
 **************************************************************************************************/
-extern "C" __declspec(dllexport) void __cdecl CNC_Handle_Sidebar_Request(SidebarRequestEnum request_type, uint64 player_id, int buildable_type, int buildable_id, short cell_x, short cell_y)
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Handle_Sidebar_Request(SidebarRequestEnum request_type, uint64 player_id, int buildable_type, int buildable_id, short cell_x, short cell_y)
 {
 	if (!DLLExportClass::Set_Player_Context(player_id)) {
 		return;
@@ -4321,7 +4321,7 @@ extern "C" __declspec(dllexport) void __cdecl CNC_Handle_Sidebar_Request(Sidebar
 *
 * History:
 **************************************************************************************************/
-extern "C" __declspec(dllexport) void __cdecl CNC_Handle_SuperWeapon_Request(SuperWeaponRequestEnum request_type, uint64 player_id, int buildable_type, int buildable_id, int x1, int y1)
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Handle_SuperWeapon_Request(SuperWeaponRequestEnum request_type, uint64 player_id, int buildable_type, int buildable_id, int x1, int y1)
 {
 	if (!DLLExportClass::Set_Player_Context(player_id)) {
 		return;
@@ -4347,7 +4347,7 @@ extern "C" __declspec(dllexport) void __cdecl CNC_Handle_SuperWeapon_Request(Sup
 *
 * History:
 **************************************************************************************************/
-extern "C" __declspec(dllexport) void __cdecl CNC_Handle_ControlGroup_Request(ControlGroupRequestEnum request_type, uint64 player_id, unsigned char control_group_index)
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Handle_ControlGroup_Request(ControlGroupRequestEnum request_type, uint64 player_id, unsigned char control_group_index)
 {
 	if (!DLLExportClass::Set_Player_Context(player_id)) {
 		return;
@@ -7841,7 +7841,7 @@ void DLLExportClass::Team_Units_Formation_Toggle_On(uint64 player_id)
 *
 * History: 1/7/2019 5:20PM - ST
 **************************************************************************************************/
-extern "C" __declspec(dllexport) void __cdecl CNC_Handle_Debug_Request(DebugRequestEnum debug_request_type, uint64 player_id, const char *object_name, int x, int y, bool unshroud, bool enemy)
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Handle_Debug_Request(DebugRequestEnum debug_request_type, uint64 player_id, const char *object_name, int x, int y, bool unshroud, bool enemy)
 {
 	if (!DLLExportClass::Set_Player_Context(player_id)) {
 		return;
@@ -7930,7 +7930,7 @@ extern "C" __declspec(dllexport) void __cdecl CNC_Handle_Debug_Request(DebugRequ
 }			  
 
 
-extern "C" __declspec(dllexport) void __cdecl CNC_Handle_Beacon_Request(BeaconRequestEnum beacon_request_type, uint64 player_id, int pixel_x, int pixel_y)
+extern "C" CROSS_PLATFORM_API void __cdecl CNC_Handle_Beacon_Request(BeaconRequestEnum beacon_request_type, uint64 player_id, int pixel_x, int pixel_y)
 {
 	if (!DLLExportClass::Set_Player_Context(player_id)) {
 		return;

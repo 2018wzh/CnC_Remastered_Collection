@@ -937,6 +937,13 @@ struct CarryoverObjectStruct
 */
 #pragma pack(pop)
 
+ 
+#ifdef _MSC_VER //用于判断是否是 vs 平台
+    #define CROSS_PLATFORM_API __declspec(dllexport)
+	#endif
+#else // 说明是 OSX 或者 Linux
+    #define CROSS_PLATFORM_API __attribute((visibility("default"))) // 明确指示，这个函数在动态库中可见
+    #define CROSS_PLATFORM_HIDDEN_API __attribute((visibility("hidden"))) // 明确指示，这个函数在动态库中不可见
 
 
 #endif //DLL_INTERFACE_H
