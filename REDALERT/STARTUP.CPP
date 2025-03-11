@@ -166,7 +166,7 @@
   *=============================================================================================*/
  #ifdef WIN32
  //int PASCAL WinMain(HINSTANCE, HINSTANCE, char *, int )
- int WinMain ( HINSTANCE instance , HINSTANCE , char * command_line , int command_show )
+ int PASCAL WinMain ( HINSTANCE instance , HINSTANCE , char * command_line , int command_show )
  //int DLL_Startup(const char * command_line_in)
  
  #else	//WIN32
@@ -176,7 +176,7 @@
  {
  #ifdef WIN32
  
-	 RunningAsDLL = false;
+	 RunningAsDLL = true;
 	 //int command_show = SW_HIDE;
 	 //HINSTANCE instance = ProgramInstance;
 	 //char command_line[1024];
